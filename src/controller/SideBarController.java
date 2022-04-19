@@ -20,16 +20,6 @@ public class SideBarController implements Initializable {
     @FXML
     private BorderPane borderpane;
 
-
-    @FXML
-    private BorderPane bpu1;
-
-    @FXML
-    private ListView<String> lvui1;
-
-    ObservableList<String> langs = FXCollections.observableArrayList("Java", "JavaScript", "C#", "Python");
-    ListView<String> langsListView = new ListView<String>(langs);
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -47,20 +37,13 @@ public class SideBarController implements Initializable {
     }
 
     @FXML
-    void ui1(MouseEvent event) {
-        //lvui1.set;
-        loadUI("../views/ui_1");
-
+    void onMouseClickedTours(MouseEvent event) {
+        loadUI("../views/ui_tours");
     }
 
     @FXML
-    void ui2(MouseEvent event) {
-        loadUI("../views/ui_2");
-    }
-
-    @FXML
-    void ui3(MouseEvent event) {
-        loadUI("../views/ui_3");
+    void onMouseClickedShoppingCart(MouseEvent event) {
+        loadUI("../views/ui_shopping_cart");
     }
 
     private void loadUI(String ui) {
